@@ -1,4 +1,4 @@
-![CI/CD GitHub Actions](https://github.com/SkurtenkoShadi/tpo3/actions/workflows/tester.yml/badge.svg)
+[![CI/CD GitHub Actions](https://github.com/SkurtenkoShadi/tpo3/actions/workflows/tester.yml/badge.svg)](https://github.com/SkurtenkoShadi/tpo3/actions/workflows/tester.yml)
 # План тестирования:
 
 # Аттестационное тестирование
