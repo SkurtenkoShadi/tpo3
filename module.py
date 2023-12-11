@@ -5,13 +5,19 @@ class MathOperations:
         self.value = value
 
     def square(self):
-        return self.value ** 2
+        if self.value == '':
+            return False
+        else:
+            return self.value ** 2
 
     def cube(self):
-        return self.value ** 3
+        if self.value == '':
+            return False
+        else:
+            return self.value ** 3
     
     def _sqrt(self):
-        if self.value < 0:
+        if self.value == '' or self.value < 0:
             return False
         else:
             return self.value ** 0.5
@@ -58,9 +64,10 @@ if __name__ == "__main__":
         squared_value = math.square()
         cubed_value = math.cube()
         sqrt_value = math._sqrt()
-        word_count = text.count_words()
-        symbols_count = text.symbols_count()
-        up = text._up() 
+
+    word_count = text.count_words()
+    symbols_count = text.symbols_count()
+    up = text._up() 
 
     print(f"Squared value: {squared_value}")
     print(f"Cubed value: {cubed_value}")

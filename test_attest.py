@@ -2,44 +2,71 @@ from module import MathOperations
 from module import TextOperation
 import unittest
 
-class TestMathOperations(unittest.TestCase):
+class TestAttest(unittest.TestCase):
 
-    def test_square(self):
-        math = MathOperations(5)
-        result = math.square()
-        self.assertEqual(result, 25)
+    def test_first(self):
+        math = MathOperations(9)
+        text = TextOperation('Hello, my friend!')
+        result1 = math.square()
+        result2 = math.cube()
+        result3 = math._sqrt()
+        result4 = text.count_words()
+        result5 = text.symbols_count()
+        result6 = text._up()
+        self.assertEqual(result1, 81)
+        self.assertEqual(result2, 729)
+        self.assertEqual(result3, 3.0)
+        self.assertEqual(result4, 3)
+        self.assertEqual(result5, 15)
+        self.assertEqual(result6, "HELLO, MY FRIEND!")
 
-    def test_cube(self):
-        math = MathOperations(6)
-        result = math.cube()
-        self.assertEqual(result, 216)
+    def test_second(self):
+        math = MathOperations("")
+        text = TextOperation('Hello friend')
+        result1 = math.square()
+        result2 = math.cube()
+        result3 = text.count_words()
+        result4 = math._sqrt()
+        result5 = text.symbols_count()
+        result6 = text._up()
+        self.assertEqual(result1, False)
+        self.assertEqual(result2, False)
+        self.assertEqual(result3, 2)
+        self.assertEqual(result4, False)
+        self.assertEqual(result5, 11)
+        self.assertEqual(result6, "HELLO FRIEND")
 
-    def test_sqrt(self):
-        math = MathOperations(25)
-        result = math._sqrt()
-        self.assertEqual(result, 5)
+    def test_third(self):
+        math = MathOperations(4)
+        text = TextOperation("")
+        result1 = math.square()
+        result2 = math.cube()
+        result3 = text.count_words()
+        result4 = math._sqrt()
+        result5 = text.symbols_count()
+        result6 = text._up()
+        self.assertEqual(result1, 16)
+        self.assertEqual(result2, 64)
+        self.assertEqual(result3, False)
+        self.assertEqual(result4, 2.0)
+        self.assertEqual(result5, False)
+        self.assertEqual(result6, False)
 
-    def test_sqrt_2(self):
-        math = MathOperations(-5)
-        result = math._sqrt()
-        self.assertEqual(result, False)
+    def test_fourth(self):
+        math = MathOperations(-4)
+        text = TextOperation("hi man")
+        result1 = math.square()
+        result2 = math.cube()
+        result3 = text.count_words()
+        result4 = math._sqrt()
+        result5 = text.symbols_count()
+        result6 = text._up()
+        self.assertEqual(result1, 16)
+        self.assertEqual(result2, -64)
+        self.assertEqual(result3, 2)
+        self.assertEqual(result4, False)
+        self.assertEqual(result5, 5)
+        self.assertEqual(result6, "HI MAN")
 
-class TestTextOperation(unittest.TestCase):
-
-    def test_count_words(self):
-        text = TextOperation('Hello my friend')
-        result = text.count_words()
-        self.assertEqual(result, 3)
-
-    def test_symbols_count(self):
-        text = TextOperation('hi, its me!')
-        result = text.symbols_count()
-        self.assertEqual(result, 9)
-
-    def test_up(self):
-        text = TextOperation('bye bye')
-        result = text._up()
-        self.assertEqual(result, 'BYE BYE')
-    
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()
