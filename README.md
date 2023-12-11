@@ -1,4 +1,3 @@
-![Build Status](https://github.com/SkurtenkoShadi/tpo3/actions/workflows/tester.yml/badge.svg?branch=master)
 ![CI/CD GitHub Actions](https://github.com/SkurtenkoShadi/tpo3/actions/workflows/tester.yml/badge.svg)
 # План тестирования:
 
