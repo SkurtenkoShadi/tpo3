@@ -1,3 +1,4 @@
+![Build Status](https://github.com/SkurtenkoShadi/tpo3/actions/workflows/tester.yml/badge.svg?branch=master)
 # План тестирования:
 
 # Аттестационное тестирование
