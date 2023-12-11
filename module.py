@@ -1,4 +1,4 @@
-# Модуль 1: Класс для работы с математическими операциями
+
 import sys
 class MathOperations:
     def __init__(self, value):
@@ -22,8 +22,6 @@ class MathOperations:
         else:
             return self.value ** 0.5
         
-
-# Модуль 2: Класс для работы с текстовой информацией
 class TextOperation:
     def __init__(self, text):
         self.text = text
@@ -47,6 +45,8 @@ class TextOperation:
             return False
         else:
             return self.text.upper()
+    
+    
         
 
 if __name__ == "__main__":                 
@@ -69,9 +69,9 @@ if __name__ == "__main__":
     symbols_count = text.symbols_count()
     up = text._up() 
 
-    print(f"Squared value: {squared_value}")
-    print(f"Cubed value: {cubed_value}")
-    print(f"Word count: {word_count}")
-    print(f"Sqrt value: {sqrt_value}")
-    print(f"Symbols count: {symbols_count}")
-    print(f"Up!: {up}")
+    print(f"Квадрат: {squared_value}")
+    print(f"Куб: {cubed_value}")
+    print(f"Количество слов: {word_count}")
+    print(f"Корень: {sqrt_value}")
+    print(f"Количество символов: {symbols_count}")
+    print(f"Верхний регистр: {up}")
