@@ -3,7 +3,6 @@ import sys
 class MathOperations:
     def __init__(self, value):
         self.value = value
-
     def square(self):
         if self.value == '':
             return False
